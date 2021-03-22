@@ -2,3 +2,8 @@
 display: flex;
 justify-content: space-between;
 }
+
+.search input:focus{
+outline: none;
+background: rgb(226, 226, 226) ;
+}
