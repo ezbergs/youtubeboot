@@ -3,7 +3,36 @@ display: flex;
 justify-content: space-between;
 }
 
-.search input:focus{
-outline: none;
-background: rgb(226, 226, 226) ;
-}
+.search {
+    display: inline-flex;
+    width: 574px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 1px 0px 0px 1px;
+    }
+    
+    
+    .search input:focus{
+    outline: none;
+    background: rgb(226, 226, 226) ;
+    width: 574px;
+    }
+    
+    .svitras {
+        padding: 10 20 5 20;
+    display: inline-flexbox;
+    
+    }
+    
+    
+ .laba {
+display: inline-flexbox;
+padding: 10px;
+float: left;
+ }
+
+ .visalaba {
+     float: left;
+ }
