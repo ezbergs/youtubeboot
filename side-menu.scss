@@ -1,0 +1,119 @@
+$base-size: 14;
+
+@function getEm($size_in_px) {
+    @return $size_in_px/14 + 0em;
+}
+
+a{
+    text-decoration: none;
+}
+
+svg {
+    fill: #606060;
+    transition: fill 0.5s;
+}
+
+.side-menu {
+    width: getEm(240);
+    font-size: $base-size + 0px;;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+
+    hr{
+        width: 100%;
+        border: 0;
+        background: #e5e5e5;
+        height: 1px;
+    }
+
+        a{
+            display: flex;
+            align-items: center;
+            height: getEm(40);
+            width: 100%;
+            text-decoration: none;
+            line-height: getEm(16);
+            padding-left: getEm(26);
+            box-sizing: border-box;
+            color: #000000;
+
+            &:hover{
+                background: rgba(0, 0, 0, 0.05);
+                transition: background 0.5s;
+            }
+        }
+
+    .icon{
+        display: flex;
+        justify-content: center;
+        width: 1.79em;
+        margin-right: 1em;
+    }
+    
+            a:active svg, 
+        & .current svg {
+            fill: red;
+            transition: fill 0.5s;
+            
+                }
+
+        a.current {
+            background: rgba(0, 0, 0, 0.1);
+            color: red;
+        }
+
+            &--closed {
+            width: 72px;
+            
+
+            a {
+                flex-direction: column;
+                padding: 0;
+                height: 72px;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            :active {
+                color: red;
+            }
+            
+            .text{
+                font-size: 9px;
+                line-height: getEm(10, 9);
+            }
+
+            .icon {
+        
+                margin-right: 0;
+            width: initial;
+            }
+
+                }
+
+            }
+
+
+
+
+ @media only screen and (max-width: 720px) {
+  .side-menu {
+    font-size: 12px;
+}
+ }
+
+
+
+ @media only screen and (max-width: 450px) {
+            .side-menu--closed{
+               width: 55px;
+            }
+            a{
+                height: 55px;
+            }
+            .text {
+                display: none;
+            }
+        }
