@@ -20,80 +20,91 @@ svg {
     flex-direction: column;
     background: #fff;
 
-    hr{
+hr{
+    width: 100%;
+    border: 0;
+    background: #e5e5e5;
+    height: 1px;
+}
+
+    a{
+        display: flex;
+        align-items: center;
+        height: getEm(40);
         width: 100%;
-        border: 0;
-        background: #e5e5e5;
-        height: 1px;
+        text-decoration: none;
+        line-height: getEm(16);
+        padding-left: getEm(26);
+        box-sizing: border-box;
+        color: #000000;
+
+        &:hover{
+            background: rgba(0, 0, 0, 0.05);
+            transition: background 0.5s;
+        }
     }
 
-        a{
-            display: flex;
-            align-items: center;
-            height: getEm(40);
-            width: 100%;
-            text-decoration: none;
-            line-height: getEm(16);
-            padding-left: getEm(26);
-            box-sizing: border-box;
-            color: #000000;
+.icon{
+    display: flex;
+    justify-content: center;
+    width: 1.79em;
+    margin-right: 1em;
+}
 
-            &:hover{
-                background: rgba(0, 0, 0, 0.05);
-                transition: background 0.5s;
-            }
-        }
+@mixin rotate($deg: -5deg) {
+    transform: rotate($deg);
+    transition: transform 2s;
+}
 
-    .icon{
-        display: flex;
+a:active svg {
+    @include rotate(-15deg) ;
+    fill: red;
+}
+
+.current svg{
+fill: red;
+@include rotate;
+}
+  
+a:hover svg {
+    @include rotate (-15deg);
+}
+a.current {
+    background: rgba(0, 0, 0, 0.1);
+    color: red;
+}
+
+    &--closed {
+    width: 72px;
+    
+
+    a {
+        flex-direction: column;
+        padding: 0;
+        height: 72px;
         justify-content: center;
-        width: 1.79em;
-        margin-right: 1em;
+        align-items: center;
+        
+    }
+
+    :active {
+        color: red;
     }
     
-            a:active svg, 
-        & .current svg {
-            fill: red;
-            transition: fill 0.5s;
-            
-                }
+    .text{
+        font-size: 9px;
+        line-height: getEm(10, 9);
+    }
 
-        a.current {
-            background: rgba(0, 0, 0, 0.1);
-            color: red;
+    .icon {
+
+        margin-right: 0;
+    width: initial;
+    }
+
         }
 
-            &--closed {
-            width: 72px;
-            
-
-            a {
-                flex-direction: column;
-                padding: 0;
-                height: 72px;
-                justify-content: center;
-                align-items: center;
-                
-            }
-
-            :active {
-                color: red;
-            }
-            
-            .text{
-                font-size: 9px;
-                line-height: getEm(10, 9);
-            }
-
-            .icon {
-        
-                margin-right: 0;
-            width: initial;
-            }
-
-                }
-
-            }
+    }
 
 
 
